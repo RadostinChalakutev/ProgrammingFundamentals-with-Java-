@@ -8,6 +8,12 @@ public class Elevator {
         int numberOfPeople = Integer.parseInt(scanner.nextLine());
         int courseElevator = Integer.parseInt(scanner.nextLine());
         int fullCourses = numberOfPeople / courseElevator;
+        boolean remainder=numberOfPeople%courseElevator!=0;
+        if (remainder){
+            fullCourses+=1;
+
+        }
+        System.out.println(fullCourses);
 
 
 
