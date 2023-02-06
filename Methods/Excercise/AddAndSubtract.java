@@ -7,7 +7,7 @@ public class AddAndSubtract {
         Scanner scanner = new Scanner(System.in);
 
         int third = Integer.parseInt(scanner.nextLine());
-        
+
     }
 
     public static int Add(int first, int second, int third) {
