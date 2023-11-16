@@ -8,7 +8,7 @@ public class AddAndSubtract {
         int first = Integer.parseInt(scanner.nextLine());
 
         int third = Integer.parseInt(scanner.nextLine());
-        Add(first,second,third);
+        Add(first,third);
     }
 
     public static int Add(int first,  int third) {
