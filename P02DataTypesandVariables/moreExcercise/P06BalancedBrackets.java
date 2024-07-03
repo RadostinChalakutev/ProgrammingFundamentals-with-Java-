@@ -8,37 +8,30 @@ public class P06BalancedBrackets {
 
         int numberOfLines=Integer.parseInt(scanner.nextLine());
 
-        boolean isOpened=false;
-
-        boolean isBalanced=true;
+        int countOpenBrackets=0;
+        int countClosingBrackets=0;
 
         for (int i = 0; i <numberOfLines ; i++) {
 
             String input=scanner.nextLine();
 
-            if(input=="("){
+            String openBracket= "(";
+            String closedBracket= ")";
 
-                if (!isOpened){
 
-                    isOpened=true;
-                }else{
+            if(input.contains(openBracket)){
 
-                    isBalanced=false;
-
-                }
+                countOpenBrackets++;
             }
-            if (input==")"){
-                if (isOpened){
 
-                    isOpened=false;
-
-                }else{
-
-                    isBalanced=false;
-                }
+            if (input.contains(closedBracket)){
+               countClosingBrackets++;
+               if (countOpenBrackets-countClosingBrackets!=0){
+                   break;
+               }
             }
         }
-        if(isBalanced&&isOpened){
+        if(countOpenBrackets==countClosingBrackets){
 
             System.out.println("BALANCED");
 
