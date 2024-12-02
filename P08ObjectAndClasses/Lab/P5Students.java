@@ -41,9 +41,10 @@ public class P5Students {
         Scanner scanner = new Scanner(System.in);
         String input = scanner.nextLine();
         List<Student> listName = new ArrayList<>();
+
         while (!input.equals("end")) {
             String[] commandData = input.split(" ");
-            String firstName = commandData[0];
+            String firstName = commandData;
             String lastName = commandData[1];
             String ages = commandData[2];
             String hometown = commandData[3];
